@@ -1,0 +1,56 @@
+/* Program to multiply two 3 x 3 matrices */
+# include <stdio.h>
+int main( )
+{
+int mat1[ 3 ][ 3 ], mat2[ 3 ][ 3 ], mat3[ 3 ][ 3 ], i, j, k, sum ;
+/* get values for first matrix */
+printf ( "\nEnter values for first 3 x 3 matrix:\n" ) ;
+for ( i = 0 ; i <= 2 ; i++ )
+{
+for ( j = 0 ; j <= 2 ; j++ )
+scanf ( "%d", &mat1[ i ][ j ] ) ;
+}
+/* get values for second matrix */
+printf ( "\nEnter values for second 3 x 3 matrix:\n" ) ;
+for ( i = 0 ; i <= 2 ; i++ )
+{
+for ( j = 0 ; j <= 2 ; j++ )
+scanf ( "%d", &mat2[ i ][ j ] ) ;
+}
+/* print the first matrix as entered */
+printf ( "\nThe first 3 x 3 matrix entered by you is:\n" ) ;
+for ( i = 0 ; i <= 2 ; i++ )
+{
+for ( j = 0 ; j <= 2 ; j++ )
+printf ( "%d\t", mat1[ i ][ j ] ) ;
+printf ( "\n" ) ;
+}
+/* print the second matrix as entered */
+printf ( "\nThe second 3 x 3 matrix entered by you is:\n" ) ;
+for ( i = 0 ; i <= 2 ; i++ )
+{
+for ( j = 0 ; j <= 2 ; j++ )
+printf ( "%d\t", mat2[ i ][ j ] ) ;
+printf ( "\n" ) ;
+}
+/* calculate the product of the two matrices */
+for ( i = 0 ; i <= 2 ; i++ )
+{
+for ( j = 0 ; j <= 2 ; j++ )
+{
+sum = 0 ;
+for ( k = 0 ; k <= 2 ; k++ )
+sum = sum + mat1[ i ][ k ] * mat2[ k ][ j ] ;
+mat3[ i ][ j ] = sum ;
+}
+}
+/* print the new matrix containing the product */
+printf ( "\nThe product of the above two matrices is:\n" ) ;
+for ( i = 0 ; i <= 2 ; i++ )
+{
+for ( j = 0 ; j <= 2 ; j++ )
+printf ( "%d\t", mat3[ i ][ j ] ) ;
+printf ( "\n" ) ;
+}
+return 0 ;
+}
